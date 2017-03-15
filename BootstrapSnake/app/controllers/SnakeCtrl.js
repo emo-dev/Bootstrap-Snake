@@ -124,7 +124,7 @@ app.controller("SnakeCtrl", function($scope, $location, $interval, MovementFacto
 
 	
 	s.startGame = () => {
-		$( ".snake-container" ).remove();
+		$( ".snakeContainer" ).remove();
 		s.pointsToAdd = 10;
 		s.gamePoints = 0;
 		s.snakePts = [];
