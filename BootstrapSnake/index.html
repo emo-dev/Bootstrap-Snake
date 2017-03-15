@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Snake</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="Snake">
+
+<div class="container">
+
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand" ng-href="/home">Bootstrap Snake</a>
+	    </div>
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+
+	
+		<div ng-view></div>		
+
+</div>
+
+<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+
+
+<!--APP-->
+<script type="text/javascript" src="app/app.js"></script>
+
+<!--FACTORIES-->
+<script type="text/javascript" src="app/factories/MovementFactory.js"></script>
+<script type="text/javascript" src="app/factories/GameBoardFactory.js"></script>
+
+<!--CONTROLLERS-->
+<script type="text/javascript" src="app/controllers/SnakeCtrl.js"></script>
+
+
+</body>
+</html>

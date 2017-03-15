@@ -1,0 +1,54 @@
+body, html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	padding-top: 1em;
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li, ol, p {
+	margin: 0;
+	padding: 0;
+}
+
+.well {
+	min-height: 400px;
+	min-width: 100px;
+	margin-top: 50px;
+	border-spacing: 2px;
+}
+
+/*.center-block {
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}*/
+
+.snakebox  {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border
+	margin: 2px !important;
+	display: table-cell;
+}
+
+.row {
+	display: table;
+	vertical-align: middle;
+}
+
+.snake {
+	background-color: black;
+}
+
+.target {
+	background-color: green;
+}
+
+
+
+
+
+
