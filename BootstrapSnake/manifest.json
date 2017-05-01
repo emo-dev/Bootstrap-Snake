@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bootstrap Snake",
+  "description": "This extension brings up the original game of snake!!",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "images/bootstrap_snake_icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Bootstrap Snake!"
+  },
+  "commands": {
+    "moveup" : {
+        "suggested_key": {
+             "default": "MacCtrl + Up" 
+        },
+        "description": "Move your snake up!",
+        "global": true
+    },
+    "movedown": {
+        "suggested_key": {
+            "default": "MacCtrl + Down"
+        },
+        "description": "Move your snake down!",
+        "global": true
+    },
+    "moveleft": {
+        "suggested_key": {
+            "default": "MacCtrl + Left"
+        },
+        "description": "Move your snake left!",
+        "global": true
+    },
+    "moveright": {
+        "suggested_key": {
+            "default": "MacCtrl + Right"
+        },
+        "description": "Move your snake right!",
+        "global": true
+    }
+},
+  "permissions": [
+    "activeTab"
+  ]
+}
