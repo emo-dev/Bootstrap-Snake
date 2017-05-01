@@ -1,54 +1,70 @@
 body, html {
-	height: 100%;
-	width: 100%;
-}
+	min-height: 208px;
+	min-width: 400px; }
 
 body {
-	padding-top: 1em;
-}
+	padding: 1em 0; 
+	background: #0f7e03; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #0f7e03, #15a305); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #0f7e03, #15a305); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #0f7e03, #15a305); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #0f7e03, #15a305); /* Standard syntax */ }
 
 h1, h2, h3, h4, h5, h6, a, ul, li, ol, p {
 	margin: 0;
-	padding: 0;
-}
+	padding: 0; }
 
-.well {
-	min-height: 400px;
+.well {	
 	min-width: 100px;
-	margin-top: 50px;
 	border-spacing: 2px;
-}
+	border: solid 1px #fff;
+	margin: auto !important;
+	width: 100%; 
+	background: #15a305; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #15a305, #19e802); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #15a305, #19e802); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #15a305, #19e802); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #15a305, #19e802); /* Standard syntax */ }
 
-/*.center-block {
-	display: block;
-	margin-left: auto !important;
-	margin-right: auto !important;
-}*/
+.navbar-brand {
+	float: none;
+	color: #fff; }
+
+.snakerow {
+	position: relative; }
 
 .snakebox  {
+	background-color: white;
 	width: 20px;
 	height: 20px;
-	background-color: white;
-	border
-	margin: 2px !important;
-	display: table-cell;
-}
-
-.row {
-	display: table;
-	vertical-align: middle;
-}
+	margin: 0 3.7px;
+	padding: 0 !important;
+	transition: all 0.1s ease 0s;	}
 
 .snake {
-	background-color: black;
-}
+	background-color: black; }
 
-.target {
-	background-color: green;
-}
+.target {	
+	width: 20px;
+	height: 20px;
+	background: red;
+	background: -webkit-linear-gradient(left top, #a51600, #ff2100); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #a51600, #ff2100); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #a51600, #ff2100); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #a51600, #ff2100); /* Standard syntax */ }
 
+.start-button {
+	margin-top: 7px;
+	margin-right: 7px;
+	background-color: white;
+	opacity: 1;
+	transition: all 0.3s ease 0s; }
 
-
-
-
-
+.start-button:hover {	
+	background: #ff2100;  /*For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #a51600, #ff2100); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #a51600, #ff2100); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #a51600, #ff2100); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #a51600, #ff2100); /* Standard syntax */
+	opacity: .90;
+	color: white; }

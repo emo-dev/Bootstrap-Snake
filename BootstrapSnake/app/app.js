@@ -6,7 +6,7 @@ var app = angular.module('Snake', ['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/home', {
-			templateUrl: 'partials/Gameboard.html',
+			templateUrl: 'partials/Main.html',
 			controller: 'SnakeCtrl',
 		})
 		.otherwise('/home');

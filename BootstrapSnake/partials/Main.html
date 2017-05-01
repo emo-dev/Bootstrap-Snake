@@ -1,0 +1,8 @@
+<div>
+	<div ng-if="game">
+		<div ng-include="'../../partials/Gameboard.html'" scope="" onload=""></div>
+	</div>	
+	<div ng-if="game === false">
+		<div ng-include="'../../partials/Scoreboard.html'" scope="" onload=""></div>		
+	</div>
+</div>
