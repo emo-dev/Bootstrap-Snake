@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, MovementFactory, GameboardFactory) {
+app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, MovementFactory, GameboardFactory, StorageFactory) {
 	let s = $scope,
 	     counter = 0,
 	     initialDirection = 'left';	
@@ -10,8 +10,9 @@ app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, Mov
 	s.snakePts = [];
 	s.target = {};
 	s.gameboard = 12;
-	s.game = false;
-	// s.currentView = 'gameBoard';
+	s.gameboardRange = _.range(143);	
+	s.game = false;	
+	s.leaderboard = [];
 
 	s.pageLayout = '../../partials/Gameboard.html';
 
@@ -78,8 +79,7 @@ app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, Mov
 						console.log("You are here, here are your coords: ", newCoordinates);
 						//if the box is already a part of the snake, stop the fight
 						if ($( `#row${newCoordinates.row}-col${newCoordinates.col}` )
-								.hasClass( 'snake' )) {
-							// alert("You just ran into yourself!!");
+								.hasClass( 'snake' )) {							
 							s.stopFight();
 						
 						//or if the next box is the target, remove class of target, generate a new target, add the class of snake
@@ -104,8 +104,7 @@ app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, Mov
 							console.log(s.snakePts);								
 						}
 				}); 								
-			} else {
-				// alert("You're a loser. Check out yo pointssssss");
+			} else {				
 				s.stopFight();
 			}
 		}, 200);
@@ -119,11 +118,22 @@ app.controller("SnakeCtrl", function($scope, $location, $timeout, $interval, Mov
 	s.stopFight = () => {
 		if (angular.isDefined(stop)) {
 			s.resetScope();					
-			$timeout(() => { 
-				s.game = false; 
-				s.start = undefined;
-				console.log("Game status: ", s.game);
-			});
+			// $timeout(() => { 
+			s.game = false; 
+			s.start = undefined;
+			console.log("Game status: ", s.game);
+			let scores = {
+				snake_length: s.snakePts.length,
+				game_points: s.gamePoints
+			};
+			StorageFactory.setLocalScores(scores).then(
+					(allScores) => {
+						s.leaderboard = allScores;
+						$timeout(() => {});
+						console.log(s.leaderboard);
+					}
+				);
+			// });
 		}
 	};
 

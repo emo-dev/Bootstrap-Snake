@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['../app/**/*.js'], //location of javascript files
       options: {
-        predef: ["document", "console", "$", "event", "target", "alert", "XMLHttpRequest", "new", "window", "require", "currentTarget", "firebase", "$scope", "$window", "localStorage"], //allows for predefined things not found in js
+        predef: ["document", "console", "$", "event", "target", "alert", "XMLHttpRequest", "new", "window", "require", "currentTarget", "firebase", "$scope", "$window", "localStorage", "StorageArea", "_"], //allows for predefined things not found in js
         esnext: true, //allows for ES6 
         globalstrict: true,
         globals: {"angular": true, "$":true, "app": true, "chrome": true}, //name value pairs, allows to define global vars used in many files.
