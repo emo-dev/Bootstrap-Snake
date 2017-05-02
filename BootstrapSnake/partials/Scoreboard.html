@@ -2,19 +2,32 @@
 	<div class="navbar-header">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1 text-center">
-			      <a class="navbar-brand">Bootstrap Snake</a>				
+			      <button ng-click="startGame()" class="start-button btn btn-block" type="button">Bootstrap Snake</button>			
 			</div>
 		</div>
 	</div>            
 
-	<div class="row text-center">	
-		<h3>SnakeLength: {{snakePts.length}}</h3>
-		<p>Here are your points: {{gamePoints}}</p>
+	<div>
+		<div class="row text-center">	
+			<h3>Snake Length: {{snakePts.length}}</h3>
+			<p>Here are your points: {{gamePoints}}</p>
+		</div>	
+		<table class="table table-striped"
+				ng-show="gamePoints > 0">
+			<thead>
+				<tr>					
+					<td>Date</td>
+					<td>Score</td>
+					<td>Length</td>
+				</tr>
+			</thead>
+			<tbody>				
+	  			<tr ng-repeat="score in leaderboard" class="text-center">
+	  				<td>{{score[0] | date : "short"}}</td>
+	  				<td>{{score[1]}}</td>
+	  				<td>{{score[2]}}</td>
+	  			</tr>
+			</tbody>
+		</table>
 	</div>
-
-	<div class="row">
-		<div class="col-xs-8 col-xs-offset-2">
-		    <button ng-click="startGame()" class="start-button btn btn-block" type="button">Start</button>			
-		</div>
-	</div>	
 </div>

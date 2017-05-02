@@ -1,8 +1,9 @@
 body, html {
-	min-height: 208px;
+	min-height: 179px;
 	min-width: 400px; }
 
 body {
+	font-family: "Press Start 2p";	
 	padding: 1em 0; 
 	background: #0f7e03; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(left top, #0f7e03, #15a305); /* For Safari 5.1 to 6.0 */
@@ -41,6 +42,12 @@ h1, h2, h3, h4, h5, h6, a, ul, li, ol, p {
 	padding: 0 !important;
 	transition: all 0.1s ease 0s;	}
 
+.snake-face {	
+	transition: all 0.1s ease 0s;	}
+
+.snake-face div {	
+	margin: auto; }
+
 .snake {
 	background-color: black; }
 
@@ -60,7 +67,7 @@ h1, h2, h3, h4, h5, h6, a, ul, li, ol, p {
 	opacity: 1;
 	transition: all 0.3s ease 0s; }
 
-.start-button:hover {	
+.start-button:hover, .snake-face:hover {	
 	background: #ff2100;  /*For browsers that do not support gradients */
 	background: -webkit-linear-gradient(left top, #a51600, #ff2100); /* For Safari 5.1 to 6.0 */
 	background: -o-linear-gradient(bottom right, #a51600, #ff2100); /* For Opera 11.1 to 12.0 */
